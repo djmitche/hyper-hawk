@@ -62,7 +62,7 @@ fn client_with_header() {
     let (mut child, port) = start_node_server();
 
     let credentials = make_credentials();
-    let url = Url::parse(&format!("http://localhost:{}/resource", port)).unwrap();
+    let url = Url::parse(&format!("http://localhost:{}/rệsource", port)).unwrap();
     let body = "foo=bar";
 
     // build a hawk::Request
@@ -130,7 +130,7 @@ fn client_with_bewit() {
     let (mut child, port) = start_node_server();
 
     let credentials = make_credentials();
-    let url = Url::parse(&format!("http://localhost:{}/resource", port)).unwrap();
+    let url = Url::parse(&format!("http://localhost:{}/rệsource", port)).unwrap();
     let hawk_req = RequestBuilder::from_url("GET", &url)
         .unwrap()
         .ext("ext-content")
